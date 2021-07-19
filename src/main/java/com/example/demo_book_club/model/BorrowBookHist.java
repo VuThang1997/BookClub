@@ -1,5 +1,6 @@
 package com.example.demo_book_club.model;
 
+import com.example.demo_book_club.model.borrow_book_info.Book;
 import com.example.demo_book_club.model.user_info.ClubMember;
 import com.example.demo_book_club.model.user_info.User;
 import lombok.Getter;
