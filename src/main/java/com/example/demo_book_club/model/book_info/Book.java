@@ -1,4 +1,4 @@
-package com.example.demo_book_club.model.borrow_book_info;
+package com.example.demo_book_club.model.book_info;
 
 import lombok.Getter;
 import lombok.ToString;

@@ -1,6 +1,6 @@
-package com.example.demo_book_club.model;
+package com.example.demo_book_club.model.borrow_book_info;
 
-import com.example.demo_book_club.model.borrow_book_info.Book;
+import com.example.demo_book_club.model.book_info.Book;
 import com.example.demo_book_club.model.user_info.ClubMember;
 import com.example.demo_book_club.model.user_info.User;
 import lombok.Getter;
@@ -19,8 +19,7 @@ import java.time.LocalDateTime;
 public class BorrowBookHist {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "borrow_book_id_gen")
-    @SequenceGenerator(name = "borrow_book_id_gen", sequenceName = "borrow_book_id_gen", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @CreationTimestamp

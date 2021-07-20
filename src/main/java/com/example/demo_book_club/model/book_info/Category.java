@@ -1,4 +1,4 @@
-package com.example.demo_book_club.model.borrow_book_info;
+package com.example.demo_book_club.model.book_info;
 
 import lombok.Getter;
 import lombok.ToString;
@@ -18,6 +18,6 @@ public class Category {
     @Column(name = "name", nullable = false, unique = true)
     private String name;
 
-    @OneToMany
+    @OneToMany(mappedBy = "category", orphanRemoval = true)
     private Set<BookCategory> bookCategories;
 }

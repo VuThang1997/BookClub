@@ -15,8 +15,7 @@ import java.time.LocalDateTime;
 public class ClubBalanceChange {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "club_balance_change_id_gen")
-    @SequenceGenerator(name = "club_balance_change_id_gen", sequenceName = "club_balance_change_id_gen", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     @CreationTimestamp
