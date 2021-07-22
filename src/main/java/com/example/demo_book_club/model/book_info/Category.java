@@ -13,7 +13,7 @@ import java.util.Set;
 public class Category {
 
     @Id
-    private int id;
+    private Integer id;
 
     @Column(name = "name", nullable = false, unique = true)
     private String name;

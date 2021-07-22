@@ -1,11 +1,13 @@
 package com.example.demo_book_club.model.book_info;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.Set;
 
+@EqualsAndHashCode
 @Getter
 @ToString
 @Entity
@@ -25,4 +27,9 @@ public class Book {
     @OneToMany(mappedBy = "book", orphanRemoval = true)
     private Set<BookCategory> bookCategories;
 
+    public Book(String name, String author, Set<BookCategory> bookCategories) {
+        this.name = name;
+        this.author = author;
+        this.bookCategories = bookCategories;
+    }
 }

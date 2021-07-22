@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 public class ReturnBookHist {
 
     @Id
-    private int id;
+    private Integer id;
 
     @OneToOne(fetch = FetchType.LAZY)
     @MapsId

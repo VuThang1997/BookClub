@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @ToString
 @Entity
 @Table(name = "leader")
-public class Leader extends ClubMember {
+public class Leader extends Member {
 
     @Column(name = "title", nullable = false)
     private String title;

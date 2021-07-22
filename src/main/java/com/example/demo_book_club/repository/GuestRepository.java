@@ -1,11 +1,9 @@
 package com.example.demo_book_club.repository;
 
-import com.example.demo_book_club.model.book_info.Book;
+import com.example.demo_book_club.model.user_info.Guest;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface BookRepository extends CrudRepository<Book, Integer> {
-
-
+public interface GuestRepository extends CrudRepository<Guest, Integer> {
 }

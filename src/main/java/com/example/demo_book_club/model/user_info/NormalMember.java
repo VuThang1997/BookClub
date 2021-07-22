@@ -10,7 +10,7 @@ import javax.persistence.*;
 @ToString
 @Entity
 @Table(name = "normal_member")
-public class NormalMember extends ClubMember {
+public class NormalMember extends Member {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "department_id")

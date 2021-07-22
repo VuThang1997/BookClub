@@ -1,7 +1,7 @@
 package com.example.demo_book_club.model.borrow_book_info;
 
 import com.example.demo_book_club.model.book_info.Book;
-import com.example.demo_book_club.model.user_info.ClubMember;
+import com.example.demo_book_club.model.user_info.Member;
 import com.example.demo_book_club.model.user_info.User;
 import lombok.Getter;
 import lombok.ToString;
@@ -20,7 +20,7 @@ public class BorrowBookHist {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @CreationTimestamp
     @Column(name = "created_time", nullable = false, updatable = false)
@@ -32,7 +32,7 @@ public class BorrowBookHist {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id", nullable = false, updatable = false)
-    private ClubMember clubMember;
+    private Member member;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "book_borrower_id", nullable = false, updatable = false)

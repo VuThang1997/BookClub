@@ -16,7 +16,7 @@ public class ClubBalance {
     // this table has only 1 record, no need to implement 1 id-generator for it
 
     @Id
-    private int id;
+    private Integer id;
 
     @UpdateTimestamp
     @Column(name = "updated_time")

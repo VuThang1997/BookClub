@@ -1,6 +1,6 @@
 package com.example.demo_book_club.model.club_info;
 
-import com.example.demo_book_club.model.user_info.ClubMember;
+import com.example.demo_book_club.model.user_info.Member;
 import lombok.Getter;
 import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
@@ -16,7 +16,7 @@ public class ClubBalanceChange {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
     @CreationTimestamp
     @Column(name = "created_time", nullable = false, updatable = false)
@@ -33,7 +33,7 @@ public class ClubBalanceChange {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "who_update", nullable = false, updatable = false)
-    private ClubMember whoUpdate;
+    private Member whoUpdate;
 
     @Column(name = "note", length = 1000)
     private String note;
