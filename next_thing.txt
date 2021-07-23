@@ -1,0 +1,31 @@
+
+========================== app Book Club
+Task 1: Guest, Member tim list Book tu book.name / book.author / book.category (available book, borrowed book (only member), lost book (only member))
+	- implement tim theo author
+	- thu nghiem CriteriaBuilder
+	- change remote project to my GitHub
+	x sua lai add bulk Book co Category
+	x implement tim theo category
+	x play voi authen OAuth 2.0
+	x thuc hien phan quyen voi spring security (branch phu)
+	x thuc hien phan quyen voi spring mvc (branch chinh)
+	x implement chia tam nhin theo role
+	x thiet lap log4j2
+	x tach 1 nhanh song song, lam viec voi Hibernate thuan
+	x thu nghiem voi Spring thuan = 1 nhanh project khac han
+	x thu nghiem doi sang PostgreSQL -> doi Identity thanh Sequence = 1 nhanh project khac
+	x thu nghiem voi batch processing
+	x thu nghiem voi MongoDb
+
+Task 2: Member cho muon Book trong ngay borrow_date -->  Member thu trustFee cua Guest
+	x thu nghiem cac TH change input => how much effort needed ?
+	x doc OOAD => reflect
+
+Task 3: Guest tra Book -> Member thu lai Book -> Member tra lai trustFee cho Guest
+Task 4: Leader add
+Task 5: Member - create report - money - for each session
+trong 1 ngay:
+ - so sach cho muon trong ngay = select count(*) from BorrowBookHist where borrow_date = ?1
+ - so sach tra trong ngay = select count(*) from ReturnBookHist where return_date = ?1
+ - so tien nhan trong ngay = select sum(trust_fee) from BorrowBookHist where borrow_date = ?1 + select sum(plus_fee) from ReturnBookHist where return_date = ?1
+ - tong so tien = so du ngay hom truoc + so tien nhan - so tien tra

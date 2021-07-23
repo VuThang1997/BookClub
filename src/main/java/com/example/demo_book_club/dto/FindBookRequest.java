@@ -5,11 +5,11 @@ import lombok.Getter;
 @Getter
 public class FindBookRequest {
 
-    private final String bookName;
-    private final String bookAuthor;
+    private final String title;
+    private final String author;
 
     public FindBookRequest(String bookName, String bookAuthor) {
-        this.bookName = bookName;
-        this.bookAuthor = bookAuthor;
+        this.title = bookName;
+        this.author = bookAuthor;
     }
 }

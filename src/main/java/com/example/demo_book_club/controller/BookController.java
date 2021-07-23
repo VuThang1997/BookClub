@@ -19,10 +19,10 @@ public class BookController {
     }
 
     @GetMapping(value = "/book")
-    public FindBookResponse findBook(@RequestParam(value = "bookName", required = false) String bookName,
+    public FindBookResponse findBook(@RequestParam(value = "title", required = false) String title,
                                      @RequestParam(value = "author", required = false) String author) {
 
-        final var request = new FindBookRequest(bookName,author);
+        final var request = new FindBookRequest(title, author);
         return bookService.findBook(request);
     }
 }
